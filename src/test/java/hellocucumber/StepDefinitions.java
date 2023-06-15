@@ -51,7 +51,7 @@ public class StepDefinitions {
 
     @After
     public void tearDown() {
-        driver.quit();
+        driver.manage().deleteAllCookies();
     }
 
     @When("user clicks on button Create account")
@@ -159,5 +159,4 @@ public class StepDefinitions {
     public void expectedPriceMatches() {
         assertEquals(price, productPage.productPricePopUpWebElement.getText());
     }
-
 }
